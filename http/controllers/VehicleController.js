@@ -13,7 +13,7 @@ const get = async (req, res) => {
         return res.json(result)
     }
     catch (e) {
-        console.log(e)
+        res.json(e)
     }
 }
 
