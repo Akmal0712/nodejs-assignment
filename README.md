@@ -23,7 +23,7 @@ Install all the dependencies
 
 `npm i`
 
-Run [NATS](https://nats.io/) on a docker container (make sure that you've [installed docker](https://docs.docker.com/install/))
+Run [NatsConnection](https://nats.io/) on a docker container (make sure that you've [installed docker](https://docs.docker.com/install/))
 
 `npm run start-nats`
 
@@ -33,18 +33,18 @@ Run the project
 
 
 ## The Assignment
-We have provided you with a starter kit that broadcast vehicle data to NATS. This is all setup for you. The architecture that you need to build is below:
+We have provided you with a starter kit that broadcast vehicle data to NatsConnection. This is all setup for you. The architecture that you need to build is below:
 
 ![](https://github.com/viriciti/nodejs-assignment/raw/master/uml.png)
 
 ### Broadcast Server
-The first rectangle on the left is the vehicle data broadcast server, it's already built and you can find the code on `./src/vehicle-data-generator/index.js`. You can run it with `npm run start-broadcast` then it will start to push data into NATS. In that file you can find some interesting question for you to answer if you want, and also some smaller side task (Not required) to make this assignment a little bit more interesting.
+The first rectangle on the left is the vehicle data broadcast server, it's already built and you can find the code on `./src/vehicle-data-generator/index.js`. You can run it with `npm run start-broadcast` then it will start to push data into NatsConnection. In that file you can find some interesting question for you to answer if you want, and also some smaller side task (Not required) to make this assignment a little bit more interesting.
 
 ### Data Storage (To be build)
-After data is pushed to NATS it will be available for other services to listen. Now comes the part where you  will have to start develop. Data that is broadcast-ed to NATS is not persisted, it means that we can not access historical data (such as data from past weeks) your task is to build a data storage server that will store all data in [MongoDB](https://www.mongodb.com/) and then serve it via an HTTP REST API and a WebSocket server for live data. So to summarize it here by the checklist of task you need to do:
+After data is pushed to NatsConnection it will be available for other services to listen. Now comes the part where you  will have to start develop. Data that is broadcast-ed to NatsConnection is not persisted, it means that we can not access historical data (such as data from past weeks) your task is to build a data storage server that will store all data in [MongoDB](https://www.mongodb.com/) and then serve it via an HTTP REST API and a WebSocket server for live data. So to summarize it here by the checklist of task you need to do:
 
  - [ ] Create MongoDB database
- - [ ] Push data from NATS to MongoDB
+ - [ ] Push data from NatsConnection to MongoDB
  - [ ] Create REST API
  - [ ] Create WebSocket API
  - [ ] Test all APIs

@@ -4,13 +4,24 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "http": "nodemon ./http/app.js",
+    "socket": "node ./socket/app.js",
+    "consumer": "node ./consumers/EventHandler.js",
     "start-nats": "sh ./start-nats",
     "start-broadcast": "node vehicle-data-generator/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.19.0",
     "csv-parse": "^3.2.0",
-    "nats": "^1.0.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.14",
+    "nats": "^1.0.1",
+    "socket.io": "^4.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

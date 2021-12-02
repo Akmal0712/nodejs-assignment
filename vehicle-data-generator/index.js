@@ -6,8 +6,8 @@ There are 2 question points for you to tell us the answer on your presentation
 If you're up for it
 
 */
-const csvParse      = require ( "csv-parse")
-const fs            = require ( "fs")
+const csvParse      = require ("csv-parse")
+const fs            = require ("fs")
 const Writable      = require ("stream").Writable
 
 // NATS Server is a simple, high performance open source messaging system
